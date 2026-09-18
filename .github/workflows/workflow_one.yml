@@ -13,3 +13,14 @@ jobs:
           echo "Hello from example_matrix job"
           echo "Hi this is my first GitHub Workflow"
           cat /etc/os-release
+
+  job2:
+    name: Job2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking the Hostname for runner
+        run: hostname
+
+      - name: Running multiple commands again
+        run: echo "Current time is $(date)"
