@@ -1,4 +1,4 @@
- name: workflow_one
+name: workflow_one
 
 on:
   push:
@@ -37,9 +37,11 @@ jobs:
 
   job4:
     name: Job4
-    needs: job2
+    needs:
+      - job1
+      - job2
     runs-on: ubuntu-latest
 
     steps:
-      - name: Job with single dependency
+      - name: Job with multiple dependencies
         run: sleep 10
