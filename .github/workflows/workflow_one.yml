@@ -1,6 +1,12 @@
- name: workflow_one
+name: workflow_one
 
- on: push
+on:
+  push:
 
- 
+jobs:
+  example_matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display message
+        run: echo "Hello from example_matrix job"
    
