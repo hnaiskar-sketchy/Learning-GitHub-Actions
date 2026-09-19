@@ -1,7 +1,6 @@
- name: workflow_one
+name: workflow_one
 
-on:
-  push:
+on: [push]
 
 jobs:
   job1:
